@@ -9,4 +9,7 @@ yum install -y svn
 yum install -y cmake
 yum install -y gcc-c++
 yum install -y boost-devel
+yum install -y tbb-devel
+yum install -y librdmacm-devel
+# has to be built...
 # yum install -y libevent
