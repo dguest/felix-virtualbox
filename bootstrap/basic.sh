@@ -8,4 +8,5 @@ yum install -y boost
 yum install -y svn
 yum install -y cmake
 yum install -y gcc-c++
+yum install -y boost-devel
 # yum install -y libevent
