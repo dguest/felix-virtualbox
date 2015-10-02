@@ -65,10 +65,23 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", path: "bootstrap/basic.sh"
+  config.vm.provision "shell", path: "bootstrap/libevent.sh"
+
   config.vm.provision "shell", path: "bootstrap/local_git.sh",
                       privileged: false
   config.vm.provision "shell", path: "bootstrap/setup.sh",
                       privileged: false
+  config.vm.provision "shell", privileged: false, inline: <<SHELL
+mkdir -p .ssh
+SHELL
+  config.vm.provision "file", source: "~/.ssh/config",
+                      destination: "~/.ssh/config"
+  config.vm.provision "file", source: "~/.ssh/id_rsa",
+                      destination: "~/.ssh/id_rsa"
+  config.vm.provision "file", source: "~/.ssh/id_rsa.pub",
+                      destination: "~/.ssh/id_rsa.pub"
+  config.vm.provision "file", source: "~/.ssh/known_hosts",
+                      destination: "~/.ssh/known_hosts"
   config.vm.provision "shell", path: "bootstrap/felix.sh",
                       privileged: false
 
