@@ -11,5 +11,6 @@ yum install -y gcc-c++
 yum install -y boost-devel
 yum install -y tbb-devel
 yum install -y librdmacm-devel
+yum install -y net-tools
 # has to be built...
 # yum install -y libevent
