@@ -13,6 +13,7 @@ git clone https://github.com/nminoru/pib.git
 K1=/usr/src/kernels/3.10.0-229.14.1.el7.x86_64/
 K2=/usr/src/kernels/3.10.0-229.11.1.el7.x86_64
 sudo ln -s $K1 $K2
+# build the emulator
 (
     cd pib/driver/
     make

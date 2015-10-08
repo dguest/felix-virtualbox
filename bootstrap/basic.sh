@@ -19,6 +19,7 @@ yum install -y gdb
 
 # stuff for IB emulator
 yum install -y kernel-devel
+yum install -y opensm
 yum install -y opensm-devel
 yum install -y libibverbs-utils
 yum install -y librdmacm-utils
