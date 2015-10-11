@@ -83,3 +83,6 @@ fi
 # enable services
 sudo systemctl enable rdma.service
 sudo systemctl start rdma.service
+
+# check out test scripts
+git clone git@github.com:dguest/pib-testing.git test
