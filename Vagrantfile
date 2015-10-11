@@ -73,6 +73,7 @@ Vagrant.configure(2) do |config|
                       privileged: false
   config.vm.provision "shell", privileged: false, inline: <<SHELL
 mkdir -p .ssh
+mkdir -p ~/.ssh/tmp
 SHELL
   config.vm.provision "file", source: "~/.ssh/config",
                       destination: "~/.ssh/config"
